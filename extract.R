@@ -1,6 +1,7 @@
 library(dplyr)
-# GUI alternative to tabulapdf: https://tabula.technology
+# https://docs.ropensci.org/tabulapdf/
 library(tabulapdf) 
+# GUI alternative to tabulapdf: https://tabula.technology
 
 bind_rows_mod <- function(df_list){
   lapply(df_list, function(dfx) mutate(dfx, across(everything(), as.character))) |> 
